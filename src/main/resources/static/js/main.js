@@ -273,7 +273,7 @@ dots:false,
 
 });
 
-// resitration_Form
+// registration_Form
 $(document).ready(function() {
 	$('.popup-with-form').magnificPopup({
 		type: 'inline',
