@@ -1,5 +1,3 @@
-# Job-Portal
-
 # 🧰 Job Portal Application
 
 A full-featured Job Portal built with **Spring MVC**, **Spring Security**, **Spring Data JPA**, and **PostgreSQL** to facilitate job search, application tracking, and user management for both recruiters and candidates.
