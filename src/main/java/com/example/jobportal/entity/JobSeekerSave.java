@@ -60,8 +60,8 @@ public class JobSeekerSave implements Serializable {
     public String toString() {
         return "JobSeekerSave{" +
                 "id=" + id +
-                ", userId=" + userId +
-                ", job=" + job +
+                ", userId=" + userId.toString() +
+                ", jobPostId=" + job.toString() +
                 '}';
     }
 }

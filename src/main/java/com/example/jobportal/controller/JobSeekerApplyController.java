@@ -2,6 +2,7 @@ package com.example.jobportal.controller;
 
 import com.example.jobportal.entity.JobPostActivity;
 import com.example.jobportal.services.JobPostActivityService;
+import com.example.jobportal.services.JobSeekerApplyService;
 import com.example.jobportal.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

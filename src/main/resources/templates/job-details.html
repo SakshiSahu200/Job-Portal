@@ -130,14 +130,14 @@
 
             <div class="px-3 mb-3" sec:authorize="hasAuthority('Job Seeker')">
                 <label class="large-label "> Job Description </label>
-                <div th:utext="${jobDetails.descriptionOfJob}"></div>
+                <div th:utext="${jobDetails.description}"></div>
             </div>
 
             <div class="px-3 mb-3" sec:authorize="hasAuthority('Recruiter')">
                 <div class="row">
                     <div class="col-md-9">
                         <label class="large-label "> Job Description </label>
-                        <div th:utext="${jobDetails.descriptionOfJob}"></div>
+                        <div th:utext="${jobDetails.description}"></div>
                     </div>
                     <div class="col-md-3 centerCandidate">
                         <div class="candidatesApplied">
