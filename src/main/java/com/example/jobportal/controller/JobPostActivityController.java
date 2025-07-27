@@ -55,11 +55,11 @@ public class JobPostActivityController {
                              @RequestParam(value= "days30", required = false) boolean days30
                              ){
         model.addAttribute("partTime", Objects.equals(partTime, "Part-Time"));
-        model.addAttribute("fullTime", Objects.equals(partTime, "Full-Time"));
-        model.addAttribute("freelance", Objects.equals(partTime, "Freelance"));
-        model.addAttribute("remoteOnly", Objects.equals(partTime, "Remote-Only"));
-        model.addAttribute("officeOnly", Objects.equals(partTime, "Office-Only"));
-        model.addAttribute("partialRemote", Objects.equals(partTime, "Partial-Remote"));
+        model.addAttribute("fullTime", Objects.equals(fullTime, "Full-Time"));
+        model.addAttribute("freelance", Objects.equals(freelance, "Freelance"));
+        model.addAttribute("remoteOnly", Objects.equals(remoteOnly, "Remote-Only"));
+        model.addAttribute("officeOnly", Objects.equals(officeOnly, "Office-Only"));
+        model.addAttribute("partialRemote", Objects.equals(partialRemote, "Partial-Remote"));
         model.addAttribute("today", today);
         model.addAttribute("days7", days7);
         model.addAttribute("days30", days30);
@@ -99,6 +99,7 @@ public class JobPostActivityController {
         if( !dateSearchFlag && !remote && !type && !StringUtils.hasText(job) && !StringUtils.hasText(location)){
             jobPost = jobPostActivityService.getAll();
         } else{
+            System.out.println("insdie " + job + location );
             jobPost = jobPostActivityService.search(job, location, Arrays.asList(partTime, fullTime, freelance),
             Arrays.asList(remoteOnly, officeOnly, partialRemote), searchDate);
         }
@@ -135,6 +136,8 @@ public class JobPostActivityController {
                             break;
                         }
                     }
+                    System.out.println(exist);
+                    System.out.println(saved);
                     if(!exist){
                         jobActivity.setIsActive(false);
                     }
