@@ -99,7 +99,7 @@ public class JobPostActivityController {
         if( !dateSearchFlag && !remote && !type && !StringUtils.hasText(job) && !StringUtils.hasText(location)){
             jobPost = jobPostActivityService.getAll();
         } else{
-            System.out.println("insdie " + job + location );
+            System.out.println("inside " + job + location );
             jobPost = jobPostActivityService.search(job, location, Arrays.asList(partTime, fullTime, freelance),
             Arrays.asList(remoteOnly, officeOnly, partialRemote), searchDate);
         }
